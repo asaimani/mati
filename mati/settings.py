@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-i1=-9vf#x-e5x95@6p1d@r
 DEBUG = False
 
 ALLOWED_HOSTS = [ 'localhost', '127.0.0.1', 'mati-production-2bc9.up.railway.app']
-CSFR_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://mati-production-2bc9.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://mati-production-2bc9.up.railway.app']
 
 # Application definition
 
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mati.urls'
