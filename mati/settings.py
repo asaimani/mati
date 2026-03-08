@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-i1=-9vf#x-e5x95@6p1d@ro6&!j&owd+r!v!z4jcy0gdds5ujf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1', 'mati-production-2bc9.up.railway.app']
+CSFR_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://mati-production-2bc9.up.railway.app']
 
 # Application definition
 
